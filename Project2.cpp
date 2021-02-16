@@ -88,8 +88,10 @@ double** transposeMatrix(
 double** b = (double**)malloc(sizeof(double*)*a_rows);
 
 
-
-
+    for(int i = 0; i<a_rows;i++){
+        b[i]= (double*)malloc(sizeof(double)*a_cols); //b_cols is the memory allocations for b_cols
+    }
+//error when row is less than columns
 
 
         for(int i = 0;i<a_rows ;i++){
@@ -101,5 +103,5 @@ double** b = (double**)malloc(sizeof(double*)*a_rows);
         // need to switch a_ros and a_cols in the info
 
         //b[a_cols][a_rows] = a[a_rows][a_cols]; // 2 loops
-    //return b;
+    return b;
 }

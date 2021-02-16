@@ -83,8 +83,23 @@ double** transposeMatrix(
         const uint32_t a_rows,
         const uint32_t a_cols) {
 //malloc
+
+
+double** b = (double**)malloc(sizeof(double*)*a_rows);
+
+
+
+
+
+
+        for(int i = 0;i<a_rows ;i++){
+            for(int j = 0;j<a_cols;j++){
+                b[j][i] = a[i][j];
+            }
+        }
+
         // need to switch a_ros and a_cols in the info
 
         //b[a_cols][a_rows] = a[a_rows][a_cols]; // 2 loops
-    //return NULL;
+    //return b;
 }
